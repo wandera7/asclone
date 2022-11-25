@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { useHistory,Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 function Signup(){
-    const history= useHistory()
+    const history = useHistory();
     const [signup,setSignup] = useState({
         name: "",
         password: "",
