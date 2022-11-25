@@ -18,9 +18,9 @@ function Signup(){
     }
     return(
         <form onSubmit={handleSubmit}>
-       Name <input type="text" name="name" value={signup.name} onChange={handleChange}/>
-       Password <input type="text" name="password" value={signup.password} onChange={handleChange}/>
-       PasswordConfirm <input type="text" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/>
+       Name <input type="text" name="name" value={signup.name} onChange={handleChange}/><br/>
+       Password <input type="text" name="password" value={signup.password} onChange={handleChange}/> <br/>
+       PasswordConfirm <input type="text" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/> <br/>
        <input type="submit" value="SignUp"/>
         </form>
     )

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink,useHistory,Redirect } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 function Navbar(){
     return(
         <div className="bg-gray-300  p-5">
