@@ -9,11 +9,17 @@ function Signup(){
     function handleChange(e){
         setSignup({...signup, [e.target.name]:e.target.value});
     }
+    function handleSubmit(e){
+        e.preventDefault();
+        setSignup({...signup, name: " ",password:" ", passwordconfirm:" "});
+
+    }
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
        Name <input type="text" name="name" value={signup.name} onChange={handleChange}/>
        Password <input type="text" name="password" value={signup.password} onChange={handleChange}/>
        PasswordConfirm <input type="text" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/>
+       <input type="submit" value="SignUp"/>
         </form>
     )
 

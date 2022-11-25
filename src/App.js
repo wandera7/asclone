@@ -1,22 +1,25 @@
 import React from "react";
-
+import Navbar from "./components/Navbar";
+import { Route, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import Signup from "./components/SIgnup";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p className="text-3xl font-bold underline m-4 py-8 uppercase">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar/>
+    <Switch>
+        <Route exact path="/login">
+        <Login  />
+        </Route>
+        <Route exact path="/signup">
+        <Signup  />
+        </Route>
+        <Route  exact path="/">
+        <Home/>
+        </Route>
+      </Switch>
+
+    </>
   );
 }
 
