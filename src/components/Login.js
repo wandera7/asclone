@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import { useHistory} from "react-router-dom";
 function Login(){
+    const history =useHistory()
     const [login,setLogin] = useState({
         name: "",
         password: ""
@@ -11,6 +12,7 @@ function Login(){
     function handleSubmit(e){
         e.preventDefault();
         setLogin({...login, name: " ",password:" "});
+        history.push('/userpage');
     }
     return(
         <form onSubmit={handleSubmit}  >

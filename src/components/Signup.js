@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { useHistory,Redirect } from "react-router-dom";
 function Signup(){
+    const history= useHistory()
     const [signup,setSignup] = useState({
         name: "",
         password: "",
@@ -12,7 +14,7 @@ function Signup(){
     function handleSubmit(e){
         e.preventDefault();
         setSignup({...signup, name: " ",password:" ", passwordconfirm:" "});
-
+        history.push('/login');
     }
     return(
         <form onSubmit={handleSubmit}>
