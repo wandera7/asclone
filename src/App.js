@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/userpage">
         <Userpage  />
         </Route>
-        <Route exact path={`/articles/:id`}>
+        <Route exact path={`/foreman/:id`}>
         <Details  />
         </Route>
       </Switch>
