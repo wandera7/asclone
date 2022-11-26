@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Home from "./components/Home";
 import Userpage from "./components/Userpage";
+import Details from "./components/Details";
 function App() {
   return (
     <>
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/userpage">
         <Userpage  />
+        </Route>
+        <Route exact path={`/articles/:id`}>
+        <Details  />
         </Route>
       </Switch>
 
