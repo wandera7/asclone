@@ -17,11 +17,11 @@ function Signup(){
         history.push('/login');
     }
     return(
-        <form onSubmit={handleSubmit}>
-       Name <input type="text" name="name" value={signup.name} onChange={handleChange}/><br/>
-       Password <input type="text" name="password" value={signup.password} onChange={handleChange}/> <br/>
-       PasswordConfirm <input type="text" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/> <br/>
-       <input type="submit" value="SignUp"/>
+        <form onSubmit={handleSubmit} className="p-5">
+       Name <input type="text" className="bg-gray-500 m-3" name="name" value={signup.name} onChange={handleChange}/><br/>
+       Password <input type="text" className="bg-gray-500 m-3" name="password" value={signup.password} onChange={handleChange}/> <br/>
+       PasswordConfirm <input type="text" className="bg-gray-500 m-3" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/> <br/>
+       <input type="submit" className="bg-red-500" value="SignUp"/>
         </form>
     )
 
