@@ -16,7 +16,7 @@ function Login(){
     }
     return(
         <div className="flex justify-between min-h-screen">
-        <div className="w-1/2 bg-cover" style={{backgroundColor:"red"}} ></div>
+        <div className="w-1/2 bg-cover back" ></div>
         <div className="w-1/2">
         <div className="flex flex-col px-24 pt-10">
         <h3> MY FOREMAN</h3>
@@ -72,13 +72,13 @@ function Login(){
         </div>
         </div>
         <div className="pt-8">
-        <button type="submit" className="py-4 px-8 w-full text-white bg-primary-200 rounded-lg shadow-lg">
+        <button type="submit" className="py-4 px-8 w-full text-white bg-primary-200 rounded-lg shadow-lg hover:bg-primary-300 focus:ring-4  ">
         Sign In
         </button>
         </div>
         </form>
         <div className="pt-4">
-        <div className="font-light text-center text-gray-700">
+        <div className="font-light text-center text-gray-600">
             Not registered yet ?
                 <Link to="/signup"  className=" pl-2 font-normal text-teal-500 hover:text-teal-600" >Create an account</Link>
         </div>
