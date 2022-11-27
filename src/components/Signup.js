@@ -18,12 +18,6 @@ function Signup(){
         history.push('/login');
     }
     return(
-    //     <form onSubmit={handleSubmit} className="p-5">
-    //    Name <input type="text" className="bg-gray-500 m-3" name="name" value={signup.name} onChange={handleChange}/><br/>
-    //    Password <input type="text" className="bg-gray-500 m-3" name="password" value={signup.password} onChange={handleChange}/> <br/>
-    //    PasswordConfirm <input type="text" className="bg-gray-500 m-3" name="passwordconfirm" value={signup.passwordconfirm} onChange={handleChange}/> <br/>
-    //    <input type="submit" className="bg-red-500" value="SignUp"/>
-    //     </form>
     <div className="flex justify-between min-h-screen">
         <div className="w-1/2 bg-cover back" ></div>
         <div className="w-1/2">
