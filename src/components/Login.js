@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory} from "react-router-dom";
+import { LockIcon, UserIcon } from "./Icons";
 function Login(){
     const history =useHistory()
     const [login,setLogin] = useState({
@@ -32,9 +33,9 @@ function Login(){
         <div className="pt-6">
             <label for="username" >Username</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400"   >
-            {/* <div className="flex justify-center items-center pl-6">
-               <EmailIcon className=" w-6 h-6  pointer-events-none" />
-            </div> */}
+             <div className="flex justify-center items-center pl-6">
+               <UserIcon className=" w-8 h-8  pointer-events-none" />
+            </div>
              <input
               type="text"
               name="name"
@@ -49,9 +50,9 @@ function Login(){
         <div className="pt-6">
             <label for="password" >Password</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400" >
-             {/* <div className="flex justify-center items-center pl-6">
-                  <PasswordIcon className=" w-6 h-6  pointer-events-none" />
-            </div> */}
+             <div className="flex justify-center items-center pl-6">
+                  <LockIcon className=" w-6 h-6  pointer-events-none" />
+            </div>
             <input
              type="password"
              name="password"
