@@ -13,15 +13,18 @@ function Login(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch('http://localhost:3000/login',{
+        fetch("http://localhost:3000/login",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
             },
-            body:JSON.stringify(login)
+            body:JSON.stringify( { user:{
+                username: login.name,
+                password:login.password,
+            }})
         })
         .then((r)=>{
-            if (r.ok){
+            if (r.accepted){
                 r.json().then((user)=>{
                     console.log(user)
                     history.push('/userpage');
@@ -33,7 +36,7 @@ function Login(){
                 });
             }
         })
-        setLogin({...login, name: " ",password:" "});
+        setLogin({...login, name: " ",password:""});
     }
     return(
         <div className="flex justify-between min-h-screen">

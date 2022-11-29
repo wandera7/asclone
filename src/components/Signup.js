@@ -16,7 +16,7 @@ function Signup(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch('http://localhost:3000/customers',{
+        fetch("http://localhost:3000/customers",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -29,7 +29,7 @@ function Signup(){
                 }
             })
         }).then((r)=>{
-            if(r.ok){
+            if(r.created){
                 r.json().then((user)=>{
                     console.log(user);
                     history.push('/login');
@@ -41,7 +41,7 @@ function Signup(){
                 });
             }
         })
-        setSignup({...signup, name: " ",password:" ", confirmPass:" "});
+        setSignup({...signup, name: " ",password:"", confirmPass:""});
     }
     return(
     <div className="flex justify-between min-h-screen">
