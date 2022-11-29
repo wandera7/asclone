@@ -12,6 +12,20 @@ function Login(){
     }
     function handleSubmit(e){
         e.preventDefault();
+        fetch('http://localhost:3000/login',{
+            method:'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body:JSON.stringify(login)
+        })
+        .then((r)=>{
+            if (r.ok){
+                r.json().then((user)=>console.log(user));
+            }else{
+                r.json().then((err)=>console.log(err));
+            }
+        })
         setLogin({...login, name: " ",password:" "});
         history.push('/userpage');
     }
