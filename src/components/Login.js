@@ -3,6 +3,7 @@ import { Link, useHistory} from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
 function Login(){
     const history =useHistory()
+    const [errors,setErrors] = useState([])
     const [login,setLogin] = useState({
         name: "",
         password: ""
@@ -21,13 +22,18 @@ function Login(){
         })
         .then((r)=>{
             if (r.ok){
-                r.json().then((user)=>console.log(user));
+                r.json().then((user)=>{
+                    console.log(user)
+                    history.push('/userpage');
+                });
             }else{
-                r.json().then((err)=>console.log(err));
+                r.json().then((err)=>{
+                    console.log(err)
+                    setErrors(err)
+                });
             }
         })
         setLogin({...login, name: " ",password:" "});
-        history.push('/userpage');
     }
     return(
         <div className="flex justify-between min-h-screen">
@@ -91,6 +97,11 @@ function Login(){
         Sign In
         </button>
         </div>
+        <div>
+        {errors.map((err) => (
+          <span key={err}>{err}</span>
+        ))}
+      </div>
         </form>
         <div className="pt-4">
         <div className="font-light text-center text-gray-600">

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
 function Signup(){
     const history = useHistory();
+    const [errors,setErrors] = useState([]);
     const [signup,setSignup] = useState({
         name: "",
         password: "",
@@ -15,17 +16,32 @@ function Signup(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch('http://localhost:3000/login',{
+        fetch('http://localhost:3000/customers',{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
             },
             body:JSON.stringify({
-                name: 
+                user:{
+                    username: signup.name,
+                    password:signup.password,
+                    password_confirmation: signup.confirmPass
+                }
             })
+        }).then((r)=>{
+            if(r.ok){
+                r.json().then((user)=>{
+                    console.log(user);
+                    history.push('/login');
+                });
+            }else{
+                r.json().then((err)=>{
+                    console.log(err);
+                    setErrors(err);
+                });
+            }
         })
         setSignup({...signup, name: " ",password:" ", confirmPass:" "});
-        history.push('/login');
     }
     return(
     <div className="flex justify-between min-h-screen">
@@ -96,6 +112,11 @@ function Signup(){
         <button type="submit" className="py-4 px-8 w-full text-white bg-primary-200 rounded-lg shadow-lg hover:bg-primary-300 focus:ring-4  ">
         Sign Up
         </button>
+        </div>
+        <div>
+        {errors.map((err) => (
+          <span key={err}>{err}</span>
+        ))}
         </div>
         </form>
         <div className="pt-4">
