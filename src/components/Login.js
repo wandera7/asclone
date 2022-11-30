@@ -13,7 +13,7 @@ function Login(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch("http://localhost:3000/login",{
+        fetch("/login",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -24,7 +24,7 @@ function Login(){
             }})
         })
         .then((r)=>{
-            if (r.accepted){
+            if (r.ok){
                 r.json().then((user)=>{
                     console.log(user)
                     history.push('/userpage');
@@ -101,8 +101,8 @@ function Login(){
         </button>
         </div>
         <div>
-        {errors.map((err) => (
-          <span key={err}>{err}</span>
+        {errors.map((err,index) => (
+          <span key={index}>{err.message}</span>
         ))}
       </div>
         </form>

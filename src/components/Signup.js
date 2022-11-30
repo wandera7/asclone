@@ -16,20 +16,20 @@ function Signup(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch("http://localhost:3000/customers",{
+        fetch("/users",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
             },
             body:JSON.stringify({
                 user:{
-                    username: signup.name,
+                    username:signup.name,
                     password:signup.password,
-                    password_confirmation: signup.confirmPass
+                    password_confirmation:signup.confirmPass
                 }
             })
         }).then((r)=>{
-            if(r.created){
+            if(r.ok){
                 r.json().then((user)=>{
                     console.log(user);
                     history.push('/login');
