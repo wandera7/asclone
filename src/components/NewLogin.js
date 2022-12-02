@@ -1,71 +1,69 @@
-import React from "react";
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory} from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
-function Signup(){
-    const history = useHistory();
-    const [errors,setErrors] = useState([]);
-    const [signup,setSignup] = useState({
+
+function NewLogin(){
+    const history =useHistory()
+    const [errors,setErrors] = useState({})
+    const [login,setLogin] = useState({
         name: "",
-        password: "",
-        confirmPass:""
+        password: ""
     })
     function handleChange(e){
-        setSignup({...signup, [e.target.name]:e.target.value});
+        setLogin({...login, [e.target.name]:e.target.value})
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch("/users",{
+        fetch("/login",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
             },
-            body:JSON.stringify({
-                user:{
-                    username:signup.name,
-                    password:signup.password,
-                    password_confirmation:signup.confirmPass
-                }
-            })
-        }).then((r)=>{
-            if(r.ok){
+            body:JSON.stringify( { user:{
+                username: login.name,
+                password:login.password,
+            }})
+        })
+        .then((r)=>{
+            if (r.ok){
                 r.json().then((user)=>{
-                    console.log(user);
-                    history.push('/loginpage');
+                    console.log(user)
+                    history.push('/userpage');
                 });
             }else{
                 r.json().then((err)=>{
-                    console.log(err);
+                    console.log(err.message)
                     setErrors((errors)=>{
                         return {...errors,err}
                     })
-                    console.log(errors);
+                    console.log(errors.err.message);
                 });
             }
         })
-        setSignup({...signup, name: " ",password:"", confirmPass:""});
+        setLogin({...login, name: " ",password:""});
     }
-    return(
-    <div className="flex justify-between min-h-screen">
+
+    return (
+
+        <div className="flex justify-between min-h-screen">
         <div className="w-1/2 bg-cover back" ></div>
         <div className="w-1/2">
         <div className="flex flex-col px-24 pt-10">
         <h3> MY FOREMAN</h3>
         <div className="pt-20 pb-3">
         <h1 className="text-3xl font-bold tracking-wide leading leading-loose">
-            Ready to build!
+            Hi, Welcome Back!
         </h1>
         <span className="font-light text-gray-500">
-            Sign up and build your dream house
+            Login to get your foreman today
         </span>
         </div>
         <form onSubmit={handleSubmit} >
         <div className="pt-6">
             <label for="username" >Username</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400"   >
-            <div className="flex justify-center items-center pl-6">
-               <UserIcon className=" w-6 h-6  pointer-events-none" />
+             <div className="flex justify-center items-center pl-6">
+               <UserIcon className=" w-8 h-8  pointer-events-none" />
             </div>
              <input
               type="text"
@@ -74,7 +72,7 @@ function Signup(){
               required
               placeholder="Enter your username"
               className="px-4 py-4.5 w-full focus:outline-none font-light border-0 focus:ring-0 focus-within:shadow-lg"
-              value={signup.name}
+              value={login.name}
               onChange={handleChange}/>
             </div>
         </div>
@@ -90,48 +88,36 @@ function Signup(){
              required
              placeholder="Enter your password"
              className="px-4 py-4.5 w-full focus:outline-none font-light border-0 focus:ring-0  focus-within:shadow-lg"
-             value={signup.password}
+             value={login.password}
              onChange={handleChange}/>
             </div>
         </div>
-        <div className="pt-6">
-            <label for="confirmpass" > Confirm Password</label>
-            <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400" >
-             <div className="flex justify-center items-center pl-6">
-                  <LockIcon className=" w-6 h-6  pointer-events-none" />
-            </div>
-            <input
-             type="password"
-             name="confirmPass"
-             required
-             placeholder="Confirm your password"
-             className="px-4 py-4.5 w-full focus:outline-none font-light border-0 focus:ring-0  focus-within:shadow-lg"
-             value={signup.confirmPass}
-             onChange={handleChange}/>
-            </div>
+        <div className="flex justify-between items-center pt-4">
+        <div className="flex items-center" >
+        <input type="checkbox"
+        name="remember"
+        className="w-5 h-5  bg-white rounded border border-gray-400 focus:outline-none focus"
+        id="remember"/>
+        <label for="remember" className="pl-2 font-light text-gray-900">Remember me</label>
         </div>
-
+        </div>
         <div className="pt-8">
         <button type="submit" className="py-4 px-8 w-full text-white bg-primary-200 rounded-lg shadow-lg hover:bg-primary-300 focus:ring-4  ">
-        Sign Up
+        Sign In
         </button>
-        </div>
-        <div>
-        {errors ? <h1>{errors.message}</h1> :null
-         }
         </div>
         </form>
         <div className="pt-4">
         <div className="font-light text-center text-gray-600">
-            Already have an account ?
-                <Link to="/loginpage"  className=" pl-2 font-normal text-teal-500 hover:text-teal-600" >Login</Link>
+            Not registered yet ?
+                <Link to="/signup"  className=" pl-2 font-normal text-teal-500 hover:text-teal-600" >Create an account</Link>
         </div>
         <div className="flex justify-between items-center pt-14">
         <span className=" text-gray-500">2022 Foreman.   All rights reserved.</span>
             <span>
-                <a href="/" className=" text-gray-500 hover:text-gray-600">  Terms of service </a>
+                <a href="#nome" className=" text-gray-500 hover:text-gray-600">  Terms of service </a>
                 <span  className=" text-gray-500 ">&#183;</span>
-                <a href="#/"  className=" text-gray-500 hover:text-gray-600" > Privacy Policy </a>
+                <a href="#nome"  className=" text-gray-500 hover:text-gray-600" > Privacy Policy </a>
             </span>
         </div>
         </div>
@@ -140,9 +126,6 @@ function Signup(){
         </div>
 
     )
-
 }
 
-
-
-export default Signup;
+export default NewLogin;

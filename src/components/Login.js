@@ -3,7 +3,7 @@ import { Link, useHistory} from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
 function Login(){
     const history =useHistory()
-    const [errors,setErrors] = useState([])
+    const [errors,setErrors] = useState({})
     const [login,setLogin] = useState({
         name: "",
         password: ""
@@ -13,7 +13,7 @@ function Login(){
     }
     function handleSubmit(e){
         e.preventDefault();
-        fetch("/login",{
+        fetch("http://localhost:3000/login",{
             method:'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -31,8 +31,11 @@ function Login(){
                 });
             }else{
                 r.json().then((err)=>{
-                    console.log(err)
-                    setErrors(err)
+                    console.log(err.message)
+                    setErrors((errors)=>{
+                        return {...errors,err}
+                    })
+                    console.log(errors.err.message);
                 });
             }
         })
@@ -100,11 +103,10 @@ function Login(){
         Sign In
         </button>
         </div>
-        <div>
-        {errors.map((err,index) => (
-          <span key={index}>{err.message}</span>
-        ))}
-      </div>
+        {/* <div>
+        {errors ? <h1>{errors.err.message}</h1> :null
+         }
+      </div> */}
         </form>
         <div className="pt-4">
         <div className="font-light text-center text-gray-600">

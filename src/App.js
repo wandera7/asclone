@@ -6,6 +6,7 @@ import Signup from "./components/Signup";
 import Home from "./components/Home";
 import Userpage from "./components/Userpage";
 import Details from "./components/Details";
+import NewLogin from "./components/NewLogin";
 function App() {
   return (
     <>
@@ -14,17 +15,17 @@ function App() {
         <Route  exact path="/">
         <Home/>
         </Route>
-        <Route exact path="/login">
-        <Login  />
+        <Route exact path="/loginpage">
+        <NewLogin/>
         </Route>
         <Route exact path="/signup">
-        <Signup  />
+        <Signup/>
         </Route>
         <Route exact path="/userpage">
-        <Userpage  />
+        <Userpage/>
         </Route>
         <Route exact path={`/foreman/:id`}>
-        <Details  />
+        <Details/>
         </Route>
       </Switch>
 
