@@ -62,7 +62,7 @@ function Signup(){
         </div>
         <form onSubmit={handleSubmit} >
         <div className="pt-6">
-            <label for="username" >Username</label>
+            <label htmlFor="username" >Username</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400"   >
             <div className="flex justify-center items-center pl-6">
                <UserIcon className=" w-6 h-6  pointer-events-none" />
@@ -79,7 +79,7 @@ function Signup(){
             </div>
         </div>
         <div className="pt-6">
-            <label for="password" >Password</label>
+            <label htmlFor="password" >Password</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400" >
              <div className="flex justify-center items-center pl-6">
                   <LockIcon className=" w-6 h-6  pointer-events-none" />
@@ -95,7 +95,7 @@ function Signup(){
             </div>
         </div>
         <div className="pt-6">
-            <label for="confirmpass" > Confirm Password</label>
+            <label htmlFor="confirmpass" > Confirm Password</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400" >
              <div className="flex justify-center items-center pl-6">
                   <LockIcon className=" w-6 h-6  pointer-events-none" />

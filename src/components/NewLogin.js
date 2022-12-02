@@ -60,7 +60,7 @@ function NewLogin(){
         </div>
         <form onSubmit={handleSubmit} >
         <div className="pt-6">
-            <label for="username" >Username</label>
+            <label htmlFor="username" >Username</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400"   >
              <div className="flex justify-center items-center pl-6">
                <UserIcon className=" w-8 h-8  pointer-events-none" />
@@ -77,7 +77,7 @@ function NewLogin(){
             </div>
         </div>
         <div className="pt-6">
-            <label for="password" >Password</label>
+            <label htmlFor="password" >Password</label>
             <div className="flex items-center mt-2 w-full rounded-lg border border-gray-400" >
              <div className="flex justify-center items-center pl-6">
                   <LockIcon className=" w-6 h-6  pointer-events-none" />
