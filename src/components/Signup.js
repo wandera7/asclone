@@ -48,10 +48,10 @@ function Signup(){
     }
     return(
     <div className="flex justify-between min-h-screen">
-        <div className="w-1/2 bg-cover back" ></div>
-        <div className="w-1/2">
-        <div className="flex flex-col px-24 pt-10">
-        <h3> MY FOREMAN</h3>
+        <div className="hidden lg:block w-1/2 bg-cover bg-center back" ></div>
+        <div className="flex-1 mx-auto max-w-2xl ">
+        <div className="flex flex-col px-8 lg:px-14 xl:px-24 pt-10">
+        <h3 className="self-center md:self-end w-32"> MY FOREMAN</h3>
         <div className="pt-20 pb-3">
         <h1 className="text-3xl font-bold tracking-wide leading leading-loose">
             Ready to build!
@@ -126,9 +126,9 @@ function Signup(){
             Already have an account ?
                 <Link to="/loginpage"  className=" pl-2 font-normal text-teal-500 hover:text-teal-600" >Login</Link>
         </div>
-        <div className="flex justify-between items-center pt-14">
-        <span className=" text-gray-500">2022 Foreman.   All rights reserved.</span>
-            <span>
+        <div className="flex justify-between items-center pt-14 flex-wrap text-center whitespace-nowrap gap-y-2">
+        <span className="flex-1 text-gray-500">2022 Foreman.   All rights reserved.</span>
+            <span className="flex flex-1 items-center space-x-1 justify-center ">
                 <a href="/" className=" text-gray-500 hover:text-gray-600">  Terms of service </a>
                 <span  className=" text-gray-500 ">&#183;</span>
                 <a href="#/"  className=" text-gray-500 hover:text-gray-600" > Privacy Policy </a>
