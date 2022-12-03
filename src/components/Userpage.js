@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-function Userpage(){
+import { Link,Redirect } from "react-router-dom";
+function Userpage({user}){
+    if (!user) return <Redirect to="/loginpage" />
     const id=2
     return(
         <div className="text-gray-600">

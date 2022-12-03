@@ -1,6 +1,7 @@
 import React from "react";
-
-function Details(){
+import {Redirect} from "react-router-dom";
+function Details({user}){
+    if (!user) return <Redirect to="/loginpage" />
     return(
         <div>
         <h3>Name:</h3>

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useHistory} from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
 
-function NewLogin(){
+function NewLogin({user,setUser}){
+    console.log(user);
     const history =useHistory()
     const [errors,setErrors] = useState({})
     const [login,setLogin] = useState({
@@ -28,6 +29,7 @@ function NewLogin(){
             if (r.ok){
                 r.json().then((user)=>{
                     console.log(user)
+                    setUser(true);
                     history.push('/userpage');
                 });
             }else{
@@ -98,7 +100,7 @@ function NewLogin(){
         name="remember"
         className="w-5 h-5  bg-white rounded border border-gray-400 focus:outline-none focus"
         id="remember"/>
-        <label for="remember" className="pl-2 font-light text-gray-900">Remember me</label>
+        <label htmlFor="remember" className="pl-2 font-light text-gray-900">Remember me</label>
         </div>
         </div>
         <div className="pt-8">
