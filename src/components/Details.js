@@ -16,10 +16,10 @@ function Details({user}){
     if (!user) return <Redirect to="/loginpage" />
     return(
         <div>
-        <h3>Name:</h3>
-        <h4>Age:</h4>
-        <h3>Image</h3>
-        <h4>Rating</h4>
+        <h3>{person.name}</h3>
+        <h4>{person.age}</h4>
+        <h4>{person.summary}</h4>
+        <h3>{person.reviews}</h3>
         </div>
     )
 }
