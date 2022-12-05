@@ -1,9 +1,10 @@
 import React from "react";
 
-function Foreman(){
+function Foreman({man}){
+    const {name, img , summary , age , location} = man;
     return(
         <div>
-        <h1>name</h1>
+        <h2>name</h2>
         </div>
     )
 }
