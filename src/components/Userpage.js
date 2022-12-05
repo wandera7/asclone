@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link,Redirect } from "react-router-dom";
+import Foreman from "./Foreman";
 function Userpage({user}){
     const [foremen, setForemen] = useState([]);
     useEffect(()=>{
@@ -25,7 +26,7 @@ function Userpage({user}){
                 foremen.map((man)=>{
                     return(
                         <div key={man.id}>
-                            
+                        <Foreman man={man}/>
                         </div>
                     )
                 })
