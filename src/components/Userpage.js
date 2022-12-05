@@ -21,6 +21,15 @@ function Userpage({user}){
     return(
         <div className="text-gray-600">
             Welcome new user
+            {
+                foremen.map((man)=>{
+                    return(
+                        <div key={man.id}>
+                            
+                        </div>
+                    )
+                })
+            }
 
             <h5>...<Link to={`/foreman/${id}`}>ReadMore</Link></h5>
         </div>
