@@ -1,6 +1,8 @@
-import React from "react";
-import {Redirect} from "react-router-dom";
+import React, { useState } from "react";
+import {Redirect, useParams} from "react-router-dom";
 function Details({user}){
+    const params = useParams();
+    const [person,setPerson] = useState({})
     if (!user) return <Redirect to="/loginpage" />
     return(
         <div>
