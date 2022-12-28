@@ -4,8 +4,8 @@ function Navbar (){
     return(
         <div className="bg-primary-200 p-5 flex justify-end">
             <NavLink className="p-3 text-white ml-32 " exact to='/'>HOME</NavLink>
-            <NavLink exact className="p-3" to='/loginpage'>LOGIN</NavLink>
-            <NavLink exact to='/signup' className="p-3 ">SIGNUP</NavLink>
+            <NavLink className="p-3" exact to='/loginpage'>LOGIN</NavLink>
+            <NavLink className="p-3"exact to='/signup'>SIGNUP</NavLink>
         </div>
     )
 
