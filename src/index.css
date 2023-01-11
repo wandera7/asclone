@@ -21,8 +21,17 @@ code {
   background-image: url('../public/images/signup.png');
   margin-bottom: 0;
 }
+.logo{
+  background-image: url('../public/images/logo.png');
+  margin-bottom: 0;
+}
 
 .back2{
   background-image: url('../public/images/Screenshot\ from\ 2022-11-28\ 15-30-59.png');
-  margin-bottom: 0;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+  height: 1000px;
+  width:54%;
+  flex-shrink: 0;
+  border: none;
 }

@@ -10,7 +10,7 @@ function App() {
   const [user,setUser] = useState(false)
   return (
     <>
-    {user?<Navbar user={user} setUser={setUser}/>:null}    
+    {user?<Navbar user={user} setUser={setUser}/>:null}
     <Switch>
         <Route  exact path="/">
         <Home/>
