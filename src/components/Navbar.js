@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import {BiLogIn} from "react-icons/bi"
 import {SiGnuprivacyguard} from "react-icons/si"
+import {FaBars, FaTimes} from 'react-icons/fa'
 function Navbar (){
     return(
         <div className="bg-primary-200 p-5 flex justify-end">
