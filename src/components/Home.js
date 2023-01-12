@@ -1,6 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 function Home(){
+    const links=[
+        {
+            id:1,
+            name:"About",
+        },
+        {
+            id:2,
+            name:"Review"
+        },
+        {
+            id:3,
+            name:"SignUp",
+        }
+    ]
     return (
         // <div className="text-6xl mt-6 ml-9">
         //     JJ IS A G
@@ -8,7 +22,7 @@ function Home(){
         <div className="w-full min-h-screen font-sans">
         <div className="px-6 bg-primary-200 ">
            <div className="flex items-center justify-between py-7">
-           <h2>MY FOREMAN</h2>
+           <h2 className=" text-4xl text-white">MY FOREMAN</h2>
             <nav className="flex items-center space-x-10">
             <a href="logo"  className="text-white">kADADAD</a>
             </nav>
