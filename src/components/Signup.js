@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
+import logo from '../assets/logo.png'
 function Signup(){
     const history = useHistory();
     const [errors,setErrors] = useState([]);
@@ -51,7 +52,10 @@ function Signup(){
         <div className="hidden lg:block w-1/2 bg-cover bg-center back" ></div>
         <div className="flex-1 mx-auto max-w-2xl ">
         <div className="flex flex-col px-8 lg:px-14 xl:px-24 pt-10">
-        <h3 className="self-center md:self-end w-32"> MY FOREMAN</h3>
+        <div className="bg-primary-200 self-center h-10 md:self-end w-32">
+        <img source={logo} alt="logo"/>
+        {/* <h3 className="text-white">FOREMAN</h3> */}
+        </div>
         <div className="pt-20 pb-3">
         <h1 className="text-3xl font-bold tracking-wide leading leading-loose">
             Ready to build!

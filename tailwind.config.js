@@ -12,6 +12,9 @@ module.exports = {
           300:'#001253',
           400:'#00005C'
         }
+      },
+      fontFamily:{
+        signature: ["Robot"],
       }
     },
   },

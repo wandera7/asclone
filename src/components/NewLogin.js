@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory} from "react-router-dom";
 import { LockIcon, UserIcon } from "./Icons";
-
+import logo from '../assets/logo.png'
 function NewLogin({user,setUser}){
     console.log(user);
     const history =useHistory()
@@ -56,6 +56,7 @@ function NewLogin({user,setUser}){
         <h1 className="text-3xl font-bold tracking-wide leading leading-loose">
             Hi, Welcome Back!
         </h1>
+        <img source={logo} alt="Logo"/>
         <span className="font-light text-gray-500">
             Login to get your foreman today
         </span>
