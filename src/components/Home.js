@@ -16,9 +16,6 @@ function Home(){
         }
     ]
     return (
-        // <div className="text-6xl mt-6 ml-9">
-        //     JJ IS A G
-        // </div>
         <div className="w-full min-h-screen font-sans">
         <div className="px-6 bg-primary-200 ">
            <div className="flex items-center justify-between py-7">
