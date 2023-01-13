@@ -24,7 +24,12 @@ function Home(){
            <div className="flex items-center justify-between py-7">
            <h2 className=" text-4xl text-white">MY FOREMAN</h2>
             <nav className="flex items-center space-x-10">
-            <a href="logo"  className="text-white">kADADAD</a>
+            {
+                links.map(({id,name})=>(
+            <a href="logo" key={id}  className="text-white">{name}</a>
+
+                ))
+            }
             </nav>
            </div>
         </div>
