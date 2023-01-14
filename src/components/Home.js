@@ -48,6 +48,10 @@ function Home(){
                 <h1>Skills </h1>
                 <p>our foremen are highly trained professionals</p>
             </div>
+            <div class="bg-black">
+            
+
+            </div>
         </div>
         </div>
         </div>
