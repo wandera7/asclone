@@ -34,25 +34,25 @@ function Home(){
         <div className="flex ">
             <div className="w-1/2 pr-8 pt-10 ml-1">
                 <h1 className="text-6xl font-bold font-display" >Start building today, with a skilled and verified  foreman </h1>
-                <p className="pt-8 max-w-md text-2xl leading-relaxed ">
+                <p className="pt-8 max-w-md text-2xl leading-relaxed">
                 Building a house requires a qualified foreman,
                 we're here to help you get started with the most qualified foremen in the industry</p>
-                <div  className="flex items-center pt-8 space-x-6 ">
+                <div  className="flex items-center pt-8 space-x-6">
                     <Link to="/loginpage" className="flex justify-center hover:shadow-xl items-center px-4 py-4 bg-primary-200 rounded-xl font-bold tracking-wide leading-7 text-white">Get yours today</Link>
                 </div>
             </div>
-            <div className=" back2">
+            <div className="back2">
 
             </div>
+        </div>
             <div>
                 <h1>Skills </h1>
                 <p>our foremen are highly trained professionals</p>
             </div>
-            <div class="bg-black">
-            
+            <div className="bg-black">
+            <p></p>
 
             </div>
-        </div>
         </div>
         </div>
 
