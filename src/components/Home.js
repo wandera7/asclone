@@ -41,18 +41,18 @@ function Home(){
                     <Link to="/loginpage" className="flex justify-center hover:shadow-xl items-center px-4 py-4 bg-primary-200 rounded-xl font-bold tracking-wide leading-7 text-white">Get yours today</Link>
                 </div>
             </div>
-            <div className="back2">
+            <div className="back2 flex items-end ">
 
             </div>
         </div>
         <div>
             <div className="py-12 px-6 mx-auto max-w-6xl">
-                <div className="flex">
-                    <div>
+                <div className="flex gap-x-5">
+                    <div className="flex flex-col p-8 space-y-4 bg-white rounded-lg border border-gray-200">
                         <div className="flex items-center space-x-3">
                         <h1 className="text-xl ">Work Description</h1>
                         </div>
-                        <p>
+                        <p className="text-sm leading-relaxed">
 
                         </p>
                     </div>
