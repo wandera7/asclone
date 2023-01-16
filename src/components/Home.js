@@ -45,17 +45,22 @@ function Home(){
 
             </div>
         </div>
-            <div>
-                <h1>Skills </h1>
-                <p>our foremen are highly trained professionals</p>
-            </div>
-            <div className="bg-black">
-            <p></p>
+        <div>
+            <div className="py-12 px-6 mx-auto max-w-6xl">
+                <div className="flex">
+                    <div>
+                        <div className="flex items-center space-x-3">
+                        <h1 className="text-xl ">Work Description</h1>
+                        </div>
+                        <p>
 
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
-
+        </div>
     )
 }
 
