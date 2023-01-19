@@ -1,4 +1,7 @@
 import React from "react";
+import HiLocationMarker from 'react-icons/hi'
+import BsFillBriefcaseFill from 'react-icons/bs'
+import FaSearchLocation from 'react-icons/fa'
 
 export function LockIcon(){
     return (
@@ -15,3 +18,38 @@ export function UserIcon(){
         </svg>
     )
 }
+export  const attributes= [
+    {
+        id:1,
+        heading:"",
+        desc:"",
+        logo:""
+    },
+    {
+        id:2,
+        heading:"",
+        desc:"",
+        logo:""
+    },
+    {
+        id:3,
+        heading:"",
+        desc:"",
+        logo:""
+    }
+]
+
+export  const links=[
+    {
+        id:1,
+        name:"About",
+    },
+    {
+        id:2,
+        name:"Review"
+    },
+    {
+        id:3,
+        name:"SignUp",
+    }
+]

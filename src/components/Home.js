@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HiLocationMarker from 'react-icons/hi'
+import BsFillBriefcaseFill from 'react-icons/bs'
+import FaSearchLocation from 'react-icons/fa'
 function Home(){
     const links=[
         {
@@ -15,26 +18,7 @@ function Home(){
             name:"SignUp",
         }
     ]
-    const attributes= [
-        {
-            id:1,
-            heading:"",
-            desc:"",
-            logo:""
-        },
-        {
-            id:2,
-            heading:"",
-            desc:"",
-            logo:""
-        },
-        {
-            id:3,
-            heading:"",
-            desc:"",
-            logo:""
-        }
-    ]
+  
     return (
         <div className="w-full min-h-screen font-sans">
         <div className="px-6 bg-primary-200 ">
