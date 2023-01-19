@@ -1,24 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HiLocationMarker from 'react-icons/hi'
-import BsFillBriefcaseFill from 'react-icons/bs'
-import FaSearchLocation from 'react-icons/fa'
+import { links, attributes } from "./Icons";
+
 function Home(){
-    const links=[
-        {
-            id:1,
-            name:"About",
-        },
-        {
-            id:2,
-            name:"Review"
-        },
-        {
-            id:3,
-            name:"SignUp",
-        }
-    ]
-  
+
     return (
         <div className="w-full min-h-screen font-sans">
         <div className="px-6 bg-primary-200 ">

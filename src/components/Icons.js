@@ -1,7 +1,7 @@
 import React from "react";
 import HiLocationMarker from 'react-icons/hi'
 import BsFillBriefcaseFill from 'react-icons/bs'
-import FaSearchLocation from 'react-icons/fa'
+import GiSandsOfTime from 'react-icons/gi'
 
 export function LockIcon(){
     return (
@@ -21,21 +21,21 @@ export function UserIcon(){
 export  const attributes= [
     {
         id:1,
-        heading:"",
+        heading:"Experienced",
         desc:"",
-        logo:""
+        logo:BsFillBriefcaseFill
     },
     {
         id:2,
-        heading:"",
+        heading:"Location",
         desc:"",
-        logo:""
+        logo:HiLocationMarker
     },
     {
         id:3,
-        heading:"",
+        heading:"Time Efficient",
         desc:"",
-        logo:""
+        logo:GiSandsOfTime
     }
 ]
 
