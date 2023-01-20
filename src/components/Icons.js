@@ -28,7 +28,7 @@ export  const attributes= [
     {
         id:2,
         heading:"Location",
-        desc:"",
+        desc:"We provide you with foremen from various locations around the country.Helping you locate the closest one to you",
         logo:HiLocationMarker
     },
     {
